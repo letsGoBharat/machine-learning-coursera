@@ -11,10 +11,13 @@ figure; hold on;
 %               2D plot, using the option 'k+' for the positive
 %               examples and 'ko' for the negative examples.
 %
-
-
-
-
+% data = load('ex2data1.txt');
+% X = data(:, [1, 2]);
+% y = data(:, 3);
+positive = find(y==1);
+negative = find(y==0);
+plot(X(positive, 1), X(positive, 2), 'k+', 'LineWidth', 2, 'MarkerSize', 7);
+plot(X(negative, 1), X(negative, 2), 'ko', 'MarkerFaceColor', 'y','MarkerSize', 7);
 
 
 
